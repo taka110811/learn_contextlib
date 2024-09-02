@@ -6,5 +6,8 @@ def tag(name):
     yield
     print("</{}>".format(name))
 
-with tag("h2"):
-    print("test")
+@tag('h2')
+def say_hello():
+    print('hello')
+
+say_hello()
